@@ -49,11 +49,11 @@ console.log(ageJonas, ageSarah);
 
 console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2 *
-
+/*
 const firstName = "Jonas";
 const lastName = "Schmedtmann";
 console.log(firstName + " " + lastName);
-
+*/
 // Assignment operators
 let x = 10 + 5; //15
 x += 10; // x = x + 10 = 25
@@ -79,3 +79,68 @@ console.log(z, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
+
+// coding challenge 1-1
+let massMark = 78;
+let heightMark = 1.69;
+let massJohn = 92;
+let heightJohn = 1.95;
+let markBMI = massMark / (heightMark ** 2);
+let johnBMI = massJohn / (heightJohn ** 2);
+console.log(markBMI, johnBMI);
+let markHigherBMI = markBMI > johnBMI;
+console.log(markHigherBMI);
+
+// coding challenge 1-2
+massMark = 95;
+heightMark = 1.88;
+massJohn = 85;
+heightJohn = 1.76;
+markBMI = massMark / (heightMark ** 2);
+johnBMI = massJohn / (heightJohn ** 2);
+console.log(markBMI, johnBMI);
+markHigherBMI = markBMI > johnBMI;
+console.log(markHigherBMI);
+
+const firstName = "Jonas";
+const job = "teacher";
+const birthYear = 1991;
+const year = 2037;
+
+const jonas = "I'm" + " " + firstName + ", a" + " " + (year - birthYear) + "-year-old" + " " + job + "!";
+console.log(jonas);
+
+// template literal
+const jonasNew = `I'm ${firstName}, a ${year - birthYear}-year-old ${job}!`;
+console.log(jonasNew);
+
+
+console.log(`Just a rehular string...`);
+console.log("String with \n\
+multiple \n\
+lines");
+
+console.log(`String
+multiple
+lines`);
+
+const age = 15;
+/*const isOldEnough = age >= 18;*/
+
+if (age >= 18) {
+    console.log("Sarah can start driving license");
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another 
+${yearsLeft} years`);
+}
+
+const birthDay = 1985;
+let century;
+
+if (birthDay <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
