@@ -42,6 +42,7 @@ console.log(job);
 */
 
 // Math operators
+/*
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
@@ -49,11 +50,11 @@ console.log(ageJonas, ageSarah);
 
 console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2 *
-/*
+
 const firstName = "Jonas";
 const lastName = "Schmedtmann";
 console.log(firstName + " " + lastName);
-*/
+
 // Assignment operators
 let x = 10 + 5; //15
 x += 10; // x = x + 10 = 25
@@ -115,7 +116,7 @@ const jonasNew = `I'm ${firstName}, a ${year - birthYear}-year-old ${job}!`;
 console.log(jonasNew);
 
 
-console.log(`Just a rehular string...`);
+console.log(`Just a regular string...`);
 console.log("String with \n\
 multiple \n\
 lines");
@@ -123,9 +124,9 @@ lines");
 console.log(`String
 multiple
 lines`);
-
-const age = 15;
-/*const isOldEnough = age >= 18;*/
+*/
+/*const age = 15;
+/*const isOldEnough = age >= 18;
 
 if (age >= 18) {
     console.log("Sarah can start driving license");
@@ -143,4 +144,35 @@ if (birthDay <= 2000) {
 } else {
     century = 21;
 }
-console.log(century);
+console.log(century);*/
+
+//conversion section
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Jonas"));
+console.log(typeof NaN);
+
+//coercion section
+console.log("I am " + 23 + " years old");
+console.log("I am " + "23" + " years old");
+console.log("I am " + String(23) + " years old");
+console.log("23" - "10" - 3);
+console.log("23" + "10" + 3);
+console.log("23" * "2");
+console.log("23" / "2");
+
+let n = "1" + 1; // "11"
+n = n - 1;
+console.log(n);
+console.log(typeof n);
+/*
++ can work as string with string or string with number, so it turns out to be string as well
+however, minus, multiplication and division, can not work with string, so in the case of string with string and string with number, it will turn out to be number because of coercion
+*/
+
+// tricky case
+let m = "10" - "4" - 3 - "2" + "5";
+console.log(m);
+console.log(typeof m);
