@@ -70,7 +70,7 @@ const yearUntilRetirement = (birthYear, firstName) => {
 console.log(yearUntilRetirement(1998, 'Willy'));
 console.log(yearUntilRetirement(1988, 'Annie'));
 */
-
+/*
 function cutFruitPieces(fruit) {
     return fruit * 4;
 }
@@ -110,3 +110,39 @@ const yearUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearUntilRetirement(1995, 'Annie'));
 console.log(yearUntilRetirement(1911, 'Willy'));
+*/
+
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ['Machael', 'Steven', 'Peter'];
+console.log(friends);
+
+const years = new Array(1991, 1984, 2008, 1998);
+console.log(friends[0]);  //array is zero based
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]); // this line is the same as console.log(friends[2])  3-2 the last element of the array
+
+friends[2] = 'Jay';
+console.log(friends);
+// friends = ['Bob', 'Alice']; replacing the whole array is not allowed
+
+const secondName = 'jonas';
+const willy = [secondName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+console.log(willy);
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+}
+const yearsy = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(yearsy[0]);
+const age2 = calcAge(yearsy[1]);
+const age3 = calcAge(yearsy[yearsy.length - 1]);
+
+console.log(age1, age2, age3);
+const ages = [age1, age2, age3]
+console.log(ages);
