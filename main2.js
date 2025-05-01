@@ -149,7 +149,7 @@ console.log(ages);
 */
 
 // Add elements
-const friends = ['Machael', 'Steven', 'Peter'];
+/*const friends = ['Machael', 'Steven', 'Peter'];
 const newLength = friends.push('Jay');
 console.log(friends);
 console.log(newLength);
@@ -177,4 +177,53 @@ console.log(friends.includes(23));
 
 if (friends.includes('Steven')) {
     console.log('You have a friend called Peter');
+}
+*/
+
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Machael', 'Peter', 'Steven']
+];
+console.log(jonasArray);
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Machael', 'Peter', 'Steven']
+};
+
+console.log(jonas.firstName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+
+const interstedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
+console.log(jonas[interstedIn]);
+//interstedIn會被替換成打字輸入的值，再利用這個值去找jonas裡面的資料
+
+if(jonas[interstedIn]){
+    console.log(jonas[interstedIn])
+}else {
+    console.log('Wrong request!');
+}
+
+jonas.location = 'Germany';
+jonas['mail']= 'jonas60822@mail.com';
+console.log(jonas);
+
+//Challenge
+// the output will be 'Jonas has three friends, and his best friend is called Machael' the values are Jonas, three, and Machael
+
+const bestFriend = prompt('How many friends does Jonas have, and who is his best friend');  // const bestFriend = 使用者輸入的值   
+
+if(jonas.friends.includes(bestFriend)){
+    console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${bestFriend}`);
+}else{
+    console.log('Wrong request');
 }
