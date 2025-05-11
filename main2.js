@@ -179,7 +179,7 @@ if (friends.includes('Steven')) {
     console.log('You have a friend called Peter');
 }
 */
-
+/*
 const jonasArray = [
     'Jonas',
     'Schmedtmann',
@@ -227,3 +227,28 @@ if(jonas.friends.includes(bestFriend)){
 }else{
     console.log('Wrong request');
 }
+
+let practice;
+console.log(typeof practice);
+
+practice = 25;
+console.log(typeof practice);
+*/
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtman',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Machael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+    calcAge: function(){
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function(){
+        return `${jonas.firstName} is a ${this.calcAge()}-year-old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} drive's license`
+    }
+};
+
+console.log(jonas.getSummary());
