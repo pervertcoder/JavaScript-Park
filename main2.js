@@ -234,7 +234,7 @@ console.log(typeof practice);
 practice = 25;
 console.log(typeof practice);
 */
-const jonas = {
+/*const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtman',
     birthYear: 1991,
@@ -252,3 +252,20 @@ const jonas = {
 };
 
 console.log(jonas.getSummary());
+*/
+
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+];
+const types = [];
+
+for (let i = 0; i < jonasArray.length; i++) {
+    console.log(jonasArray[i], typeof jonasArray[i]);
+
+    types.push(typeof jonasArray[i]);
+}
+console.log(types);
