@@ -254,7 +254,7 @@ console.log(typeof practice);
 console.log(jonas.getSummary());
 */
 
-const jonasArray = [
+/*const jonasArray = [
     'Jonas',
     'Schmedtmann',
     2037 - 1991,
@@ -269,3 +269,98 @@ for (let i = 0; i < jonasArray.length; i++) {
     types.push(typeof jonasArray[i]);
 }
 console.log(types);
+*/
+/*
+console.log('Lifting weights repetition 1');
+console.log('Lifting weights repetition 2');
+console.log('Lifting weights repetition 3');
+console.log('Lifting weights repetition 4');
+console.log('Lifting weights repetition 5');
+console.log('Lifting weights repetition 6');
+console.log('Lifting weights repetition 7');
+console.log('Lifting weights repetition 8');
+console.log('Lifting weights repetition 9');
+console.log('Lifting weights repetition 10');
+*/
+/*for (let rep = 0; rep < 30; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+*/
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    'playing computer',
+    true
+];
+
+/*
+const types = [];
+
+for (let i = 0; i < jonasArray.length; i++) {
+    console.log(jonasArray[i], typeof jonasArray[i]);
+    types.push(typeof jonasArray[i]);
+}
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const age = [];
+
+for (let i = 0; i < years.length; i++) {
+    age.push(2037 - years[i]);
+}
+console.log(age);
+
+// continue and break
+
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'string') continue;
+
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+
+
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] === 'number') break;
+
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+*/
+
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`--- Starting exercise ${exercise}---`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Lifting weight repetition ${rep}`);
+    }
+}
+
+//while
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+// while correspondence
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repetition ${rep}`);
+    rep++
+}
+
+
+let dice = Math.trunc(Math.random() * 6);
+while (dice !== 0) {
+    console.log(dice, 'verified');
+    dice = Math.trunc(Math.random() * 6);
+    if (dice === 0) console.log('Loop is about to end ...');
+}
+
+//console.log(dice);
