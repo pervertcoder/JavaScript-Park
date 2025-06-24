@@ -371,7 +371,7 @@ function checkMoney(n) {
     return false;
   }
 }
-console.log(checkMoney(500));
+//console.log(checkMoney(500));
 
 //function findMax(nums) {}
 
@@ -389,4 +389,32 @@ function findMax(nums) {
   return nums[nums.length - 1];
 }
 
-console.log(findMax([5, 1, 9, 3, 6]));
+//console.log(findMax([5, 1, 9, 3, 6]));
+
+function findMax2(nums) {
+  let max = nums[0];
+  let min = nums[0];
+  for (let i = 0; i < nums.length; i++) {
+    if (typeof nums[i] !== "number") continue;
+    if (nums[i] > max) {
+      max = nums[i];
+    }
+    if (nums[i] < min) {
+      min = nums[i];
+    }
+  }
+  const amplitude = max - min;
+  return amplitude;
+}
+//console.log(findMax2([5, 6, 12, 99, 2, 35, 100, "error"]));
+
+const printForecast = function (arr) {
+  let result = "";
+  for (let i = 0; i < arr.length; i++) {
+    result += `${arr[i]}°C in ${i + 1} day ...`;
+  }
+  return result;
+};
+console.log("..." + printForecast([5, 12, 26, 4]));
+
+// TEST DATA: [7.5, 8, 6.5, 0, 8.5, 4, 0]
